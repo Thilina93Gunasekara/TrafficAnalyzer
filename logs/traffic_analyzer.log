@@ -1,0 +1,230 @@
+2025-09-30 21:16:25,650 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 21:16:25,650 - __main__ - INFO - ============================================================
+2025-09-30 21:16:25,650 - __main__ - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 21:16:25,650 - __main__ - INFO - ============================================================
+2025-09-30 21:16:25,650 - __main__ - INFO - Initializing Data Access Layer...
+2025-09-30 21:16:25,669 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 21:16:25,670 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 21:16:25,670 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 21:16:25,671 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 21:16:25,672 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 21:16:25,672 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 21:16:25,673 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 21:16:25,673 - __main__ - INFO - Initializing Business Logic Layer...
+2025-09-30 21:16:25,673 - __main__ - INFO - Initializing External Services Layer...
+2025-09-30 21:16:25,673 - __main__ - INFO - Initializing Presentation Layer...
+2025-09-30 21:16:25,673 - __main__ - INFO - ✅ All components initialized successfully
+2025-09-30 21:16:25,673 - __main__ - INFO - Checking for existing data...
+2025-09-30 21:16:25,673 - __main__ - INFO - No existing data found. Generating sample data...
+2025-09-30 21:16:25,681 - data_access.database_manager - INFO - Bulk inserted 1440 traffic records
+2025-09-30 21:16:25,681 - __main__ - INFO - Generated 1440 sample traffic records
+2025-09-30 21:16:25,682 - __main__ - INFO - ✅ Sample data generated successfully
+2025-09-30 21:16:25,682 - __main__ - INFO - 📊 Starting automated data collection...
+2025-09-30 21:16:31,702 - external_services.api_handler - INFO - Collected traffic data for 6 routes
+2025-09-30 21:16:31,703 - __main__ - INFO - ✅ Collected data for 6 routes
+2025-09-30 21:16:31,703 - __main__ - INFO - 🚀 Starting console interface...
+2025-09-30 21:17:27,331 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: High Level Road
+2025-09-30 21:18:10,844 - business_logic.traffic_analyzer - INFO - Analytics generated for High Level Road: 240 records
+2025-09-30 21:18:10,845 - business_logic.traffic_analyzer - INFO - Analytics generated for Low Level Road: 240 records
+2025-09-30 21:18:10,846 - business_logic.traffic_analyzer - INFO - Analytics generated for Baseline Road: 240 records
+2025-09-30 21:18:10,847 - business_logic.traffic_analyzer - INFO - Analytics generated for Galle Road: 240 records
+2025-09-30 21:18:10,847 - business_logic.traffic_analyzer - INFO - Analytics generated for Marine Drive: 240 records
+2025-09-30 21:18:10,848 - business_logic.traffic_analyzer - INFO - Analytics generated for Other Roads: 240 records
+2025-09-30 21:18:47,824 - presentation.console_ui - INFO - Console UI shutting down
+2025-09-30 21:18:47,824 - __main__ - INFO - 🛑 Shutting down application...
+2025-09-30 21:18:47,825 - __main__ - INFO - 💾 Closing database connections...
+2025-09-30 21:18:47,825 - __main__ - INFO - 🔌 Stopping external services...
+2025-09-30 21:18:47,825 - __main__ - INFO - ✅ Application shutdown complete
+2025-09-30 21:40:56,963 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 21:40:56,963 - main - INFO - ============================================================
+2025-09-30 21:40:56,963 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 21:40:56,963 - main - INFO - ============================================================
+2025-09-30 21:40:56,963 - main - INFO - Initializing Data Access Layer...
+2025-09-30 21:40:56,966 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 21:40:56,967 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 21:40:56,967 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 21:40:56,967 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 21:40:56,968 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 21:40:56,968 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 21:40:56,968 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 21:40:56,968 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 21:40:56,969 - main - INFO - Initializing External Services Layer...
+2025-09-30 21:40:56,969 - main - INFO - Initializing Presentation Layer...
+2025-09-30 21:40:56,969 - main - INFO - ✅ All components initialized successfully
+2025-09-30 21:40:56,969 - main - INFO - Checking for existing data...
+2025-09-30 21:40:56,970 - main - INFO - Found 1440 existing records
+2025-09-30 21:47:07,673 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 21:47:07,674 - main - INFO - ============================================================
+2025-09-30 21:47:07,674 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 21:47:07,674 - main - INFO - ============================================================
+2025-09-30 21:47:07,674 - main - INFO - Initializing Data Access Layer...
+2025-09-30 21:47:07,677 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 21:47:07,677 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 21:47:07,678 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 21:47:07,678 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 21:47:07,678 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 21:47:07,679 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 21:47:07,679 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 21:47:07,679 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 21:47:07,679 - main - INFO - Initializing External Services Layer...
+2025-09-30 21:47:07,679 - main - INFO - Initializing Presentation Layer...
+2025-09-30 21:47:07,679 - main - INFO - ✅ All components initialized successfully
+2025-09-30 21:47:07,679 - main - INFO - Checking for existing data...
+2025-09-30 21:47:07,681 - main - INFO - Found 1440 existing records
+2025-09-30 21:50:46,924 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 21:50:46,924 - main - INFO - ============================================================
+2025-09-30 21:50:46,924 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 21:50:46,924 - main - INFO - ============================================================
+2025-09-30 21:50:46,924 - main - INFO - Initializing Data Access Layer...
+2025-09-30 21:50:46,927 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 21:50:46,928 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 21:50:46,928 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 21:50:46,928 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 21:50:46,929 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 21:50:46,929 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 21:50:46,929 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 21:50:46,929 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 21:50:46,929 - main - INFO - Initializing External Services Layer...
+2025-09-30 21:50:46,929 - main - INFO - Initializing Presentation Layer...
+2025-09-30 21:50:46,930 - main - INFO - ✅ All components initialized successfully
+2025-09-30 21:50:46,930 - main - INFO - Checking for existing data...
+2025-09-30 21:50:46,931 - main - INFO - Found 1440 existing records
+2025-09-30 21:55:31,697 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 21:55:31,697 - main - INFO - ============================================================
+2025-09-30 21:55:31,697 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 21:55:31,698 - main - INFO - ============================================================
+2025-09-30 21:55:31,698 - main - INFO - Initializing Data Access Layer...
+2025-09-30 21:55:31,700 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 21:55:31,701 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 21:55:31,701 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 21:55:31,702 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 21:55:31,702 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 21:55:31,703 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 21:55:31,703 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 21:55:31,703 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 21:55:31,703 - main - INFO - Initializing External Services Layer...
+2025-09-30 21:55:31,703 - main - INFO - Initializing Presentation Layer...
+2025-09-30 21:55:31,703 - main - INFO - ✅ All components initialized successfully
+2025-09-30 21:55:31,703 - main - INFO - Checking for existing data...
+2025-09-30 21:55:31,703 - main - INFO - Found 1440 existing records
+2025-09-30 21:55:31,728 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.20.10.3:5001
+2025-09-30 21:55:31,728 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 21:55:31,729 - werkzeug - INFO -  * Restarting with stat
+2025-09-30 21:55:32,531 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 21:55:32,531 - main - INFO - ============================================================
+2025-09-30 21:55:32,531 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 21:55:32,531 - main - INFO - ============================================================
+2025-09-30 21:55:32,531 - main - INFO - Initializing Data Access Layer...
+2025-09-30 21:55:32,534 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 21:55:32,534 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 21:55:32,535 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 21:55:32,535 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 21:55:32,536 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 21:55:32,536 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 21:55:32,537 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 21:55:32,537 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 21:55:32,537 - main - INFO - Initializing External Services Layer...
+2025-09-30 21:55:32,537 - main - INFO - Initializing Presentation Layer...
+2025-09-30 21:55:32,537 - main - INFO - ✅ All components initialized successfully
+2025-09-30 21:55:32,537 - main - INFO - Checking for existing data...
+2025-09-30 21:55:32,537 - main - INFO - Found 1440 existing records
+2025-09-30 21:55:32,556 - werkzeug - WARNING -  * Debugger is active!
+2025-09-30 21:55:32,563 - werkzeug - INFO -  * Debugger PIN: 163-187-943
+2025-09-30 21:55:53,049 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 21:55:53] "GET / HTTP/1.1" 200 -
+2025-09-30 21:55:53,159 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 21:55:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-09-30 21:56:42,403 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 21:56:42] "POST /api/predict HTTP/1.1" 200 -
+2025-09-30 22:30:46,684 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 22:30:46,685 - main - INFO - ============================================================
+2025-09-30 22:30:46,685 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 22:30:46,685 - main - INFO - ============================================================
+2025-09-30 22:30:46,685 - main - INFO - Initializing Data Access Layer...
+2025-09-30 22:30:46,688 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 22:30:46,689 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 22:30:46,689 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 22:30:46,689 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 22:30:46,690 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 22:30:46,690 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 22:30:46,690 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 22:30:46,690 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 22:30:46,690 - main - INFO - Initializing External Services Layer...
+2025-09-30 22:30:46,690 - main - INFO - Initializing Presentation Layer...
+2025-09-30 22:30:46,690 - main - INFO - ✅ All components initialized successfully
+2025-09-30 22:30:46,690 - main - INFO - Checking for existing data...
+2025-09-30 22:30:46,692 - main - INFO - Found 1440 existing records
+2025-09-30 22:30:46,718 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://172.20.10.3:5001
+2025-09-30 22:30:46,718 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-30 22:30:46,719 - werkzeug - INFO -  * Restarting with stat
+2025-09-30 22:30:47,518 - utilities.logger - INFO - Logging system initialized successfully
+2025-09-30 22:30:47,518 - main - INFO - ============================================================
+2025-09-30 22:30:47,518 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-09-30 22:30:47,519 - main - INFO - ============================================================
+2025-09-30 22:30:47,519 - main - INFO - Initializing Data Access Layer...
+2025-09-30 22:30:47,521 - data_access.database_manager - INFO - Database initialized successfully
+2025-09-30 22:30:47,522 - data_access.database_manager - INFO - Route created: High Level Road
+2025-09-30 22:30:47,523 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-09-30 22:30:47,523 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-09-30 22:30:47,523 - data_access.database_manager - INFO - Route created: Galle Road
+2025-09-30 22:30:47,524 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-09-30 22:30:47,524 - data_access.database_manager - INFO - Route created: Other Roads
+2025-09-30 22:30:47,524 - main - INFO - Initializing Business Logic Layer...
+2025-09-30 22:30:47,524 - main - INFO - Initializing External Services Layer...
+2025-09-30 22:30:47,524 - main - INFO - Initializing Presentation Layer...
+2025-09-30 22:30:47,524 - main - INFO - ✅ All components initialized successfully
+2025-09-30 22:30:47,524 - main - INFO - Checking for existing data...
+2025-09-30 22:30:47,524 - main - INFO - Found 1440 existing records
+2025-09-30 22:30:47,545 - werkzeug - WARNING -  * Debugger is active!
+2025-09-30 22:30:47,550 - werkzeug - INFO -  * Debugger PIN: 163-187-943
+2025-09-30 22:30:59,293 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 22:30:59] "GET / HTTP/1.1" 200 -
+2025-09-30 22:31:47,569 - werkzeug - INFO - 127.0.0.1 - - [30/Sep/2025 22:31:47] "POST /api/predict HTTP/1.1" 200 -
+2025-10-01 03:19:42,163 - utilities.logger - INFO - Logging system initialized successfully
+2025-10-01 03:19:42,163 - main - INFO - ============================================================
+2025-10-01 03:19:42,163 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-10-01 03:19:42,163 - main - INFO - ============================================================
+2025-10-01 03:19:42,163 - main - INFO - Initializing Data Access Layer...
+2025-10-01 03:19:42,167 - data_access.database_manager - INFO - Database initialized successfully
+2025-10-01 03:19:42,168 - data_access.database_manager - INFO - Route created: High Level Road
+2025-10-01 03:19:42,169 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-10-01 03:19:42,169 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-10-01 03:19:42,169 - data_access.database_manager - INFO - Route created: Galle Road
+2025-10-01 03:19:42,170 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-10-01 03:19:42,170 - data_access.database_manager - INFO - Route created: Other Roads
+2025-10-01 03:19:42,170 - main - INFO - Initializing Business Logic Layer...
+2025-10-01 03:19:42,170 - main - INFO - Initializing External Services Layer...
+2025-10-01 03:19:42,170 - main - INFO - Initializing Presentation Layer...
+2025-10-01 03:19:42,170 - main - INFO - ✅ All components initialized successfully
+2025-10-01 03:19:42,170 - main - INFO - Checking for existing data...
+2025-10-01 03:19:42,172 - main - INFO - Found 1440 existing records
+2025-10-01 03:19:42,202 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.8.101:5001
+2025-10-01 03:19:42,202 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-01 03:19:42,203 - werkzeug - INFO -  * Restarting with stat
+2025-10-01 03:19:43,162 - utilities.logger - INFO - Logging system initialized successfully
+2025-10-01 03:19:43,162 - main - INFO - ============================================================
+2025-10-01 03:19:43,162 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-10-01 03:19:43,162 - main - INFO - ============================================================
+2025-10-01 03:19:43,162 - main - INFO - Initializing Data Access Layer...
+2025-10-01 03:19:43,164 - data_access.database_manager - INFO - Database initialized successfully
+2025-10-01 03:19:43,165 - data_access.database_manager - INFO - Route created: High Level Road
+2025-10-01 03:19:43,166 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-10-01 03:19:43,166 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-10-01 03:19:43,167 - data_access.database_manager - INFO - Route created: Galle Road
+2025-10-01 03:19:43,167 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-10-01 03:19:43,167 - data_access.database_manager - INFO - Route created: Other Roads
+2025-10-01 03:19:43,167 - main - INFO - Initializing Business Logic Layer...
+2025-10-01 03:19:43,167 - main - INFO - Initializing External Services Layer...
+2025-10-01 03:19:43,167 - main - INFO - Initializing Presentation Layer...
+2025-10-01 03:19:43,167 - main - INFO - ✅ All components initialized successfully
+2025-10-01 03:19:43,167 - main - INFO - Checking for existing data...
+2025-10-01 03:19:43,168 - main - INFO - Found 1440 existing records
+2025-10-01 03:19:43,189 - werkzeug - WARNING -  * Debugger is active!
+2025-10-01 03:19:43,195 - werkzeug - INFO -  * Debugger PIN: 606-790-829
+2025-10-01 03:20:03,113 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 03:20:03] "GET / HTTP/1.1" 200 -
+2025-10-01 03:20:03,240 - werkzeug - INFO - 127.0.0.1 - - [01/Oct/2025 03:20:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -

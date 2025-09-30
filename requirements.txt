@@ -1,0 +1,55 @@
+# Traffic Analysis System - Required Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core Data Processing
+pandas==2.0.3
+numpy==1.24.3
+
+# Visualization
+matplotlib==3.7.2
+plotly==5.15.0
+seaborn==0.12.2
+
+# Web Framework (for future web interface)
+flask==2.3.3
+flask-cors==4.0.0
+
+# HTTP Requests for APIs
+requests==2.31.0
+
+# Database
+# sqlite3 is included with Python
+
+# Data Validation
+pydantic==2.0.3
+
+# Testing Framework
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Development Dependencies
+black==23.7.0          # Code formatting
+flake8==6.0.0          # Code linting
+mypy==1.5.1            # Type checking
+
+# Documentation
+sphinx==7.1.2
+
+# Optional: For advanced data analysis
+scikit-learn==1.3.0    # If you want to add ML predictions
+scipy==1.11.1          # Statistical functions
+
+# Optional: For GUI interface (if needed later)
+# tkinter is included with Python
+# PyQt5==5.15.9
+
+# Optional: For Excel file support
+openpyxl==3.1.2
+
+# Optional: For advanced plotting
+bokeh==3.2.1
+
+# Note: 
+# - All packages are pinned to specific versions for reproducibility
+# - Remove version pins if you want latest versions
+# - Some packages are marked as optional based on your needs
