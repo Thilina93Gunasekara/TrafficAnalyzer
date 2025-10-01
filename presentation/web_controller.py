@@ -47,8 +47,8 @@ class WebController:
 
         @self.app.route('/')
         def index():
-            """Main page"""
-            return self._render_main_page()
+            """Serve the main React application"""
+            return render_template('index.html')
 
         @self.app.route('/api/health', methods=['GET'])
         def health_check():

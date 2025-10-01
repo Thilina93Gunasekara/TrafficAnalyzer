@@ -66,6 +66,8 @@ class DatabaseManager:
                     distance_km REAL,
                     typical_speed_kmh REAL,
                     route_type TEXT,
+                    start_location TEXT,
+                    end_location TEXT,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
                 )
