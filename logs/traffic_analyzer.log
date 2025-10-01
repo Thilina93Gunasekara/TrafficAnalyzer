@@ -3938,3 +3938,155 @@
 2025-10-02 03:17:19,251 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
 2025-10-02 03:17:19,256 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
 2025-10-02 03:17:19,257 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 03:17:19] "GET /api/predictions?from=Rajagiriya&to=Kelaniya HTTP/1.1" 200 -
+2025-10-02 05:04:39,320 - utilities.logger - INFO - Logging system initialized successfully
+2025-10-02 05:04:39,321 - main - INFO - ============================================================
+2025-10-02 05:04:39,321 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-10-02 05:04:39,321 - main - INFO - ============================================================
+2025-10-02 05:04:39,321 - main - INFO - Initializing Data Access Layer...
+2025-10-02 05:04:39,326 - data_access.database_manager - INFO - Database initialized successfully
+2025-10-02 05:04:39,327 - data_access.database_manager - INFO - Route created: High Level Road
+2025-10-02 05:04:39,327 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-10-02 05:04:39,327 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-10-02 05:04:39,328 - data_access.database_manager - INFO - Route created: Galle Road
+2025-10-02 05:04:39,328 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-10-02 05:04:39,328 - data_access.database_manager - INFO - Route created: Other Roads
+2025-10-02 05:04:39,328 - main - INFO - Initializing Business Logic Layer...
+2025-10-02 05:04:39,329 - main - INFO - Initializing External Services Layer...
+2025-10-02 05:04:39,329 - main - INFO - Initializing Presentation Layer...
+2025-10-02 05:04:39,329 - main - INFO - ✅ All components initialized successfully
+2025-10-02 05:04:39,329 - main - INFO - Checking for existing data...
+2025-10-02 05:04:39,340 - main - INFO - Found 108000 existing records
+2025-10-02 05:04:39,375 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.8.100:5001
+2025-10-02 05:04:39,375 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-02 05:04:39,376 - werkzeug - INFO -  * Restarting with stat
+2025-10-02 05:04:40,211 - utilities.logger - INFO - Logging system initialized successfully
+2025-10-02 05:04:40,211 - main - INFO - ============================================================
+2025-10-02 05:04:40,211 - main - INFO - Starting Maharagama-TownHall Traffic Analyzer v1.0.0
+2025-10-02 05:04:40,211 - main - INFO - ============================================================
+2025-10-02 05:04:40,211 - main - INFO - Initializing Data Access Layer...
+2025-10-02 05:04:40,214 - data_access.database_manager - INFO - Database initialized successfully
+2025-10-02 05:04:40,215 - data_access.database_manager - INFO - Route created: High Level Road
+2025-10-02 05:04:40,215 - data_access.database_manager - INFO - Route created: Low Level Road
+2025-10-02 05:04:40,215 - data_access.database_manager - INFO - Route created: Baseline Road
+2025-10-02 05:04:40,216 - data_access.database_manager - INFO - Route created: Galle Road
+2025-10-02 05:04:40,216 - data_access.database_manager - INFO - Route created: Marine Drive
+2025-10-02 05:04:40,216 - data_access.database_manager - INFO - Route created: Other Roads
+2025-10-02 05:04:40,216 - main - INFO - Initializing Business Logic Layer...
+2025-10-02 05:04:40,216 - main - INFO - Initializing External Services Layer...
+2025-10-02 05:04:40,216 - main - INFO - Initializing Presentation Layer...
+2025-10-02 05:04:40,216 - main - INFO - ✅ All components initialized successfully
+2025-10-02 05:04:40,216 - main - INFO - Checking for existing data...
+2025-10-02 05:04:40,223 - main - INFO - Found 108000 existing records
+2025-10-02 05:04:40,244 - werkzeug - WARNING -  * Debugger is active!
+2025-10-02 05:04:40,250 - werkzeug - INFO -  * Debugger PIN: 354-341-593
+2025-10-02 05:04:59,318 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:04:59,319 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:04:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:04:59,330 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:04:59,331 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:04:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:04:59,342 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:04:59,343 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:04:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:04:59,352 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:04:59,352 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:04:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:05:02,258 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:02] "GET / HTTP/1.1" 200 -
+2025-10-02 05:05:03,341 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:05:03,343 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:03] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:05:03,410 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-10-02 05:05:33,345 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:05:33,346 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:33] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:05:59,320 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:05:59,321 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:05:59,339 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:05:59,340 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:05:59,349 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:05:59,350 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:05:59,359 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:05:59,359 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:05:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:06:03,341 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:06:03,342 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:06:03] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:06:33,342 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:06:33,343 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:06:33] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:06:59,317 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:06:59,317 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:06:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:06:59,327 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:06:59,328 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:06:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:06:59,336 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:06:59,337 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:06:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:06:59,345 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:06:59,346 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:06:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:07:04,315 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:07:04,316 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:07:04] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:07:34,310 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:07:34,311 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:07:34] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:07:59,322 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:07:59,323 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:07:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:07:59,335 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:07:59,336 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:07:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:07:59,347 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:07:59,347 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:07:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:07:59,357 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:07:59,357 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:07:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:08:04,312 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:08:04,313 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:08:04] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:08:59,323 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:08:59,324 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:08:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:08:59,336 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:08:59,337 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:08:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:08:59,348 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:08:59,348 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:08:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:08:59,357 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:08:59,358 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:08:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:08:59,366 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:08:59,367 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:08:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:09:59,328 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:09:59,329 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:09:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:09:59,343 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:09:59,344 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:09:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:09:59,355 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:09:59,356 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:09:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:09:59,367 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:09:59,367 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:09:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:09:59,377 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:09:59,377 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:09:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:10:59,310 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:10:59,311 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:10:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:10:59,321 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:10:59,322 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:10:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:10:59,331 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:10:59,331 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:10:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:10:59,340 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:10:59,341 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:10:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:10:59,353 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:10:59,355 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:10:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:11:59,301 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:11:59,302 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:11:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:11:59,316 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:11:59,317 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:11:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:11:59,328 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:11:59,328 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:11:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:11:59,337 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:11:59,338 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:11:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:11:59,346 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:11:59,347 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:11:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:12:59,310 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:12:59,311 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:12:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:12:59,324 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:12:59,325 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:12:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:12:59,337 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:12:59,337 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:12:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:12:59,346 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:12:59,346 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:12:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:12:59,354 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:12:59,374 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:12:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:13:59,309 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:13:59,310 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:13:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:13:59,323 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:13:59,324 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:13:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:13:59,334 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:13:59,335 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:13:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:13:59,344 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:13:59,344 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:13:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -
+2025-10-02 05:13:59,353 - business_logic.traffic_analyzer - INFO - Route comparison completed. Best route: Kotte Road
+2025-10-02 05:13:59,353 - werkzeug - INFO - 127.0.0.1 - - [02/Oct/2025 05:13:59] "GET /api/live-dashboard?from=Maharagama&to=Town%20Hall,%20Colombo HTTP/1.1" 200 -

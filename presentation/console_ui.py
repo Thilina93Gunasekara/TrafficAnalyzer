@@ -1,15 +1,12 @@
 # presentation/console_ui.py
 # Console-based user interface for the traffic analysis system
 
-# presentation/console_ui.py
-# Console-based user interface for the traffic analysis system
-
 import os
 import sys
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 
-# Add parent directory to path if needed
+# Add parent directory to path
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if parent_dir not in sys.path:
     sys.path.insert(0, parent_dir)
@@ -25,8 +22,8 @@ from config.settings import TrafficConfig
 
 class ConsoleUI:
     """
-    Console-based user interface for the traffic analysis system
-    Provides an interactive command-line interface for users
+    Console-based user interface for the traffic analysis system.
+    Provides an interactive command-line interface for users.
     """
 
     def __init__(self, traffic_service: TrafficAnalysisService):
@@ -65,7 +62,7 @@ class ConsoleUI:
                     self.wait_for_continue()
 
         except KeyboardInterrupt:
-            self.show_info("\n👋 Application interrupted by user")
+            self.show_info("\nApplication interrupted by user")
         except Exception as e:
             self.show_error(f"Unexpected error: {e}")
             self.logger.error(f"Console UI error: {e}")
@@ -75,7 +72,7 @@ class ConsoleUI:
     def show_welcome(self):
         """Display welcome message"""
         print("=" * 70)
-        print("🚗 MAHARAGAMA TO TOWN HALL TRAFFIC ANALYZER")
+        print("COLOMBO TRAFFIC ANALYZER")
         print("=" * 70)
         print("Professional Traffic Analysis System")
         print("Version 1.0.0 - Layered Architecture Implementation")
@@ -84,22 +81,22 @@ class ConsoleUI:
 
     def show_main_menu(self):
         """Display the main menu"""
-        print("\n📋 MAIN MENU")
+        print("\nMAIN MENU")
         print("-" * 40)
-        print("1. 🎯 Find Best Route")
-        print("2. ⏱️  Predict Specific Route Time")
-        print("3. 📊 Compare All Routes")
-        print("4. 📈 View Traffic Analytics")
-        print("5. 🔧 Route Optimization Tools")
-        print("6. 🔍 System Status")
-        print("7. 🚪 Exit")
+        print("1. Find Best Route")
+        print("2. Predict Specific Route Time")
+        print("3. Compare All Routes")
+        print("4. View Traffic Analytics")
+        print("5. Route Optimization Tools")
+        print("6. System Status")
+        print("7. Exit")
         print("-" * 40)
 
     def find_best_route(self):
         """Handle best route finding workflow"""
         try:
             self.clear_screen()
-            print("🎯 FIND BEST ROUTE")
+            print("FIND BEST ROUTE")
             print("=" * 50)
 
             # Get user input for conditions
@@ -107,7 +104,7 @@ class ConsoleUI:
             if not request:
                 return
 
-            print("\n🔍 Analyzing routes...")
+            print("\nAnalyzing routes...")
             comparison = self.traffic_service.compare_all_routes(request)
 
             self.display_route_comparison(comparison)
@@ -120,7 +117,7 @@ class ConsoleUI:
         """Handle specific route prediction"""
         try:
             self.clear_screen()
-            print("⏱️ PREDICT SPECIFIC ROUTE TIME")
+            print("PREDICT SPECIFIC ROUTE TIME")
             print("=" * 50)
 
             # Get route selection
@@ -136,7 +133,7 @@ class ConsoleUI:
             # Update request with selected route
             request.route_name = route_name
 
-            print(f"\n🔍 Analyzing {route_name}...")
+            print(f"\nAnalyzing {route_name}...")
             prediction = self.traffic_service.predict_travel_time(request)
 
             self.display_single_prediction(prediction, request)
@@ -149,14 +146,14 @@ class ConsoleUI:
         """Handle route comparison"""
         try:
             self.clear_screen()
-            print("📊 COMPARE ALL ROUTES")
+            print("COMPARE ALL ROUTES")
             print("=" * 50)
 
             request = self.get_prediction_request()
             if not request:
                 return
 
-            print("\n🔍 Comparing all available routes...")
+            print("\nComparing all available routes...")
             comparison = self.traffic_service.compare_all_routes(request)
 
             self.display_detailed_comparison(comparison)
@@ -169,7 +166,7 @@ class ConsoleUI:
         """Display traffic analytics"""
         try:
             self.clear_screen()
-            print("📈 TRAFFIC ANALYTICS")
+            print("TRAFFIC ANALYTICS")
             print("=" * 50)
 
             print("Select analysis type:")
@@ -196,7 +193,7 @@ class ConsoleUI:
         """Show route optimization tools"""
         try:
             self.clear_screen()
-            print("🔧 ROUTE OPTIMIZATION TOOLS")
+            print("ROUTE OPTIMIZATION TOOLS")
             print("=" * 50)
 
             print("Available tools:")
@@ -223,28 +220,28 @@ class ConsoleUI:
         """Display system status and statistics"""
         try:
             self.clear_screen()
-            print("🔍 SYSTEM STATUS")
+            print("SYSTEM STATUS")
             print("=" * 50)
 
             # Get database statistics
             db_stats = self.traffic_service.db_manager.get_database_stats()
 
-            print("📊 DATABASE STATISTICS:")
-            print(f"  • Total Routes: {db_stats['routes_count']}")
-            print(f"  • Traffic Records: {db_stats['records_count']:,}")
-            print(f"  • Database Size: {db_stats['database_size_mb']:.2f} MB")
-            print(f"  • Earliest Record: {db_stats['earliest_record']}")
-            print(f"  • Latest Record: {db_stats['latest_record']}")
+            print("DATABASE STATISTICS:")
+            print(f"  Total Routes: {db_stats['routes_count']}")
+            print(f"  Traffic Records: {db_stats['records_count']:,}")
+            print(f"  Database Size: {db_stats['database_size_mb']:.2f} MB")
+            print(f"  Earliest Record: {db_stats['earliest_record']}")
+            print(f"  Latest Record: {db_stats['latest_record']}")
 
-            print("\n🚗 AVAILABLE ROUTES:")
+            print("\nAVAILABLE ROUTES:")
             routes = self.traffic_service.db_manager.get_all_routes()
             for route in routes:
-                print(f"  • {route.name} ({route.distance_km:.1f} km)")
+                print(f"  {route.name} ({route.distance_km:.1f} km)")
 
-            print("\n⚙️ SYSTEM INFORMATION:")
-            print(f"  • Application: {TrafficConfig.__class__.__name__}")
-            print(f"  • Database Path: {db_stats['database_path']}")
-            print(f"  • System Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            print("\nSYSTEM INFORMATION:")
+            print(f"  Application: Colombo Traffic Analyzer")
+            print(f"  Database Path: {db_stats['database_path']}")
+            print(f"  System Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
         except Exception as e:
             self.show_error(f"Error getting system status: {e}")
@@ -253,7 +250,7 @@ class ConsoleUI:
     def get_prediction_request(self) -> Optional[PredictionRequest]:
         """Get prediction request parameters from user"""
         try:
-            print("\n📝 Enter Trip Conditions:")
+            print("\nEnter Trip Conditions:")
             print("-" * 30)
 
             # Get day type
@@ -293,7 +290,7 @@ class ConsoleUI:
         try:
             routes = TrafficConfig.DEFAULT_ROUTES
 
-            print("\n🛣️ Available Routes:")
+            print("\nAvailable Routes:")
             for i, route in enumerate(routes, 1):
                 print(f"{i}. {route}")
 
@@ -316,7 +313,7 @@ class ConsoleUI:
     def get_day_type_selection(self) -> Optional[DayType]:
         """Get day type selection from user"""
         try:
-            print("\n📅 Day Type:")
+            print("\nDay Type:")
             print("1. Week Day")
             print("2. Weekend Day")
             print("3. Rainy Day")
@@ -363,7 +360,7 @@ class ConsoleUI:
     def get_weather_selection(self) -> Optional[WeatherCondition]:
         """Get weather condition selection from user"""
         try:
-            print("\n🌤️ Weather Condition:")
+            print("\nWeather Condition:")
             print("1. Clear")
             print("2. Cloudy")
             print("3. Rainy")
@@ -387,7 +384,7 @@ class ConsoleUI:
     def get_season_selection(self) -> Optional[SeasonType]:
         """Get season type selection from user"""
         try:
-            print("\n📅 Season Type:")
+            print("\nSeason Type:")
             print("1. Regular Season")
             print("2. School Holidays")
             print("3. Public Holiday")
@@ -408,56 +405,55 @@ class ConsoleUI:
 
     def display_route_comparison(self, comparison: RouteComparison):
         """Display route comparison results"""
-        print("\n🏆 ROUTE COMPARISON RESULTS")
+        print("\nROUTE COMPARISON RESULTS")
         print("=" * 60)
 
         sorted_routes = comparison.get_sorted_routes()
 
-        print("\n📊 ROUTE RANKINGS:")
+        print("\nROUTE RANKINGS:")
         print("-" * 45)
         for i, prediction in enumerate(sorted_routes):
-            icon = "🥇" if i == 0 else "🥈" if i == 1 else "🥉" if i == 2 else "  "
-            confidence_bar = "█" * int(prediction.confidence_level * 10)
+            rank = f"#{i+1}" if i < 3 else f"  {i+1}"
+            confidence_pct = int(prediction.confidence_level * 100)
 
-            print(f"{icon} {prediction.route_name:<20} : {prediction.predicted_time_minutes:2d} min")
-            print(f"   Confidence: {confidence_bar:<10} {prediction.confidence_level:.1%}")
+            print(f"{rank} {prediction.route_name:<25} : {prediction.predicted_time_minutes:2d} min ({confidence_pct}%)")
 
-        print(f"\n🎯 BEST ROUTE: {comparison.best_route}")
-        print(f"⏱️ ESTIMATED TIME: {sorted_routes[0].predicted_time_minutes} minutes")
+        print(f"\nBEST ROUTE: {comparison.best_route}")
+        print(f"ESTIMATED TIME: {sorted_routes[0].predicted_time_minutes} minutes")
 
         if len(sorted_routes) > 1:
             time_saved = sorted_routes[1].predicted_time_minutes - sorted_routes[0].predicted_time_minutes
-            print(f"💰 TIME SAVED: {time_saved} minutes vs second best")
+            print(f"TIME SAVED: {time_saved} minutes vs second best")
 
-        print("\n💡 RECOMMENDATIONS:")
+        print("\nRECOMMENDATIONS:")
         print("-" * 25)
         for rec in comparison.recommendations:
-            print(f"  • {rec}")
+            print(f"  {rec}")
 
     def display_single_prediction(self, prediction: PredictionResult, request: PredictionRequest):
         """Display single route prediction"""
-        print("\n🎯 PREDICTION RESULTS")
+        print("\nPREDICTION RESULTS")
         print("=" * 50)
 
-        print(f"\n🛣️ ROUTE: {prediction.route_name}")
-        print(f"⏱️ PREDICTED TIME: {prediction.predicted_time_minutes} minutes")
-        print(f"📊 CONFIDENCE: {prediction.confidence_level:.1%}")
+        print(f"\nROUTE: {prediction.route_name}")
+        print(f"PREDICTED TIME: {prediction.predicted_time_minutes} minutes")
+        print(f"CONFIDENCE: {prediction.confidence_level:.1%}")
 
-        print(f"\n📝 CONDITIONS ANALYZED:")
-        print(f"  • Day Type: {request.day_type.value}")
-        print(f"  • Time: {request.hour:02d}:00")
-        print(f"  • Weather: {request.weather_condition.value}")
-        print(f"  • Season: {request.season_type.value}")
+        print(f"\nCONDITIONS ANALYZED:")
+        print(f"  Day Type: {request.day_type.value}")
+        print(f"  Time: {request.hour:02d}:00")
+        print(f"  Weather: {request.weather_condition.value}")
+        print(f"  Season: {request.season_type.value}")
 
-        print(f"\n🔍 FACTORS CONSIDERED:")
+        print(f"\nFACTORS CONSIDERED:")
         for factor in prediction.factors_considered:
-            print(f"  • {factor}")
+            print(f"  {factor}")
 
     def display_detailed_comparison(self, comparison: RouteComparison):
         """Display detailed route comparison"""
         self.display_route_comparison(comparison)
 
-        print("\n📈 DETAILED ANALYSIS:")
+        print("\nDETAILED ANALYSIS:")
         print("-" * 30)
 
         sorted_routes = comparison.get_sorted_routes()
@@ -467,7 +463,7 @@ class ConsoleUI:
             time_diff = prediction.predicted_time_minutes - best_time
             percentage_diff = (time_diff / best_time) * 100 if best_time > 0 else 0
 
-            print(f"\n🛣️ {prediction.route_name}:")
+            print(f"\n{prediction.route_name}:")
             print(f"   Time: {prediction.predicted_time_minutes} min (+{time_diff} min, +{percentage_diff:.1f}%)")
             print(f"   Confidence: {prediction.confidence_level:.1%}")
             print(f"   Factors: {len(prediction.factors_considered)} considered")
@@ -479,22 +475,22 @@ class ConsoleUI:
             if not route_name:
                 return
 
-            print(f"\n📊 ANALYTICS FOR {route_name}")
+            print(f"\nANALYTICS FOR {route_name}")
             print("=" * 50)
 
             analytics = self.traffic_service.analyze_route_performance(route_name)
 
-            print(f"\n📈 PERFORMANCE METRICS:")
-            print(f"  • Average Travel Time: {analytics.average_travel_time:.1f} minutes")
-            print(f"  • Range: {analytics.min_travel_time}-{analytics.max_travel_time} minutes")
-            print(f"  • Variability: {analytics.get_variability():.1f}%")
-            print(f"  • Data Points: {analytics.total_records:,} records")
+            print(f"\nPERFORMANCE METRICS:")
+            print(f"  Average Travel Time: {analytics.average_travel_time:.1f} minutes")
+            print(f"  Range: {analytics.min_travel_time}-{analytics.max_travel_time} minutes")
+            print(f"  Variability: {analytics.get_variability():.1f}%")
+            print(f"  Data Points: {analytics.total_records:,} records")
 
-            print(f"\n⏰ TIME-BASED ANALYSIS:")
-            print(f"  • Peak Hours Average: {analytics.peak_hour_average:.1f} minutes")
-            print(f"  • Off-Peak Average: {analytics.off_peak_average:.1f} minutes")
-            print(f"  • Weekend Average: {analytics.weekend_average:.1f} minutes")
-            print(f"  • Rainy Day Average: {analytics.rainy_day_average:.1f} minutes")
+            print(f"\nTIME-BASED ANALYSIS:")
+            print(f"  Peak Hours Average: {analytics.peak_hour_average:.1f} minutes")
+            print(f"  Off-Peak Average: {analytics.off_peak_average:.1f} minutes")
+            print(f"  Weekend Average: {analytics.weekend_average:.1f} minutes")
+            print(f"  Rainy Day Average: {analytics.rainy_day_average:.1f} minutes")
 
         except Exception as e:
             self.show_error(f"Error showing single route analytics: {e}")
@@ -504,7 +500,7 @@ class ConsoleUI:
         try:
             routes = TrafficConfig.DEFAULT_ROUTES
 
-            print("\n📊 ALL ROUTES OVERVIEW")
+            print("\nALL ROUTES OVERVIEW")
             print("=" * 50)
 
             route_analytics = []
@@ -515,17 +511,15 @@ class ConsoleUI:
             # Sort by average travel time
             route_analytics.sort(key=lambda x: x.average_travel_time)
 
-            print("\n🏆 ROUTES BY AVERAGE SPEED (FASTEST TO SLOWEST):")
+            print("\nROUTES BY AVERAGE SPEED (FASTEST TO SLOWEST):")
             print("-" * 55)
 
             for i, analytics in enumerate(route_analytics):
-                icon = "🥇" if i == 0 else "🥈" if i == 1 else "🥉" if i == 2 else "  "
+                rank = f"#{i+1}"
                 reliability = "High" if analytics.get_variability() < 20 else "Medium" if analytics.get_variability() < 40 else "Low"
 
-                print(
-                    f"{icon} {analytics.route_name:<20} : {analytics.average_travel_time:5.1f} min (Reliability: {reliability})")
-                print(
-                    f"    Range: {analytics.min_travel_time}-{analytics.max_travel_time} min, Records: {analytics.total_records:,}")
+                print(f"{rank} {analytics.route_name:<25} : {analytics.average_travel_time:5.1f} min (Reliability: {reliability})")
+                print(f"    Range: {analytics.min_travel_time}-{analytics.max_travel_time} min, Records: {analytics.total_records:,}")
 
         except Exception as e:
             self.show_error(f"Error showing all routes analytics: {e}")
@@ -533,30 +527,30 @@ class ConsoleUI:
     def show_traffic_patterns(self):
         """Show traffic patterns analysis"""
         try:
-            print("\n📈 TRAFFIC PATTERNS ANALYSIS")
+            print("\nTRAFFIC PATTERNS ANALYSIS")
             print("=" * 50)
 
             patterns = self.traffic_service.get_traffic_patterns()
 
-            print("\n⏰ PEAK HOURS IDENTIFICATION:")
+            print("\nPEAK HOURS IDENTIFICATION:")
             peak_hours = patterns.get('peak_hours', [])
             off_peak_hours = patterns.get('off_peak_hours', [])
 
-            print(f"  • Peak Hours: {', '.join(f'{h:02d}:00' for h in peak_hours)}")
-            print(f"  • Off-Peak Hours: {', '.join(f'{h:02d}:00' for h in off_peak_hours)}")
+            print(f"  Peak Hours: {', '.join(f'{h:02d}:00' for h in peak_hours)}")
+            print(f"  Off-Peak Hours: {', '.join(f'{h:02d}:00' for h in off_peak_hours)}")
 
             hourly_patterns = patterns.get('hourly_patterns', {})
             if hourly_patterns:
-                print(f"\n📊 HOURLY TRAFFIC INTENSITY:")
+                print(f"\nHOURLY TRAFFIC INTENSITY:")
                 print("-" * 30)
 
                 for hour in sorted(hourly_patterns.keys()):
                     avg_time = hourly_patterns[hour]
-                    intensity = "🔴 High" if hour in peak_hours else "🟡 Medium" if avg_time > 30 else "🟢 Low"
-                    bar_length = min(20, int(avg_time / 3))  # Scale bar
-                    bar = "█" * bar_length
+                    intensity = "High" if hour in peak_hours else "Medium" if avg_time > 30 else "Low"
+                    bar_length = min(20, int(avg_time / 3))
+                    bar = "#" * bar_length
 
-                    print(f"{hour:2d}:00 │ {bar:<20} │ {avg_time:5.1f} min │ {intensity}")
+                    print(f"{hour:2d}:00 | {bar:<20} | {avg_time:5.1f} min | {intensity}")
 
         except Exception as e:
             self.show_error(f"Error showing traffic patterns: {e}")
@@ -564,7 +558,7 @@ class ConsoleUI:
     def show_departure_time_optimizer(self):
         """Show departure time optimization tool"""
         try:
-            print("\n🔧 DEPARTURE TIME OPTIMIZER")
+            print("\nDEPARTURE TIME OPTIMIZER")
             print("=" * 50)
 
             route_name = self.get_route_selection()
@@ -587,14 +581,14 @@ class ConsoleUI:
             if not day_type or not weather:
                 return
 
-            print(f"\n🔍 Optimizing departure time for {route_name}...")
+            print(f"\nOptimizing departure time for {route_name}...")
             print(f"Target arrival: {arrival_hour:02d}:00")
 
             # Simple optimization logic
             best_departure_times = []
 
             for dep_hour in range(max(0, arrival_hour - 3), arrival_hour):
-                request = PredictionRequest(route_name, day_type, dep_hour, weather)
+                request = PredictionRequest(route_name, day_type, dep_hour, weather, SeasonType.REGULAR)
                 prediction = self.traffic_service.predict_travel_time(request)
 
                 expected_arrival = dep_hour + (prediction.predicted_time_minutes / 60)
@@ -609,14 +603,14 @@ class ConsoleUI:
                     })
 
             if best_departure_times:
-                print(f"\n🎯 OPTIMAL DEPARTURE TIMES:")
+                print(f"\nOPTIMAL DEPARTURE TIMES:")
                 print("-" * 40)
                 for dep in sorted(best_departure_times, key=lambda x: x['buffer'], reverse=True):
-                    print(f"  🕐 {dep['departure']} → {dep['travel_time']} min → {dep['buffer']:.0f} min buffer")
+                    print(f"  {dep['departure']} -> {dep['travel_time']} min -> {dep['buffer']:.0f} min buffer")
             else:
-                print(f"\n⚠️ No optimal departure times found. Consider:")
-                print(f"  • Leaving earlier (before {arrival_hour - 2:02d}:00)")
-                print(f"  • Adjusting arrival time expectations")
+                print(f"\nNo optimal departure times found. Consider:")
+                print(f"  Leaving earlier (before {arrival_hour - 2:02d}:00)")
+                print(f"  Adjusting arrival time expectations")
 
         except Exception as e:
             self.show_error(f"Error in departure time optimizer: {e}")
@@ -624,20 +618,20 @@ class ConsoleUI:
     def show_incident_alternatives(self):
         """Show alternative routes for incidents"""
         try:
-            print("\n🚨 INCIDENT ALTERNATIVE ROUTES")
+            print("\nINCIDENT ALTERNATIVE ROUTES")
             print("=" * 50)
 
             blocked_route = self.get_route_selection()
             if not blocked_route:
                 return
 
-            print(f"🚫 Route blocked: {blocked_route}")
+            print(f"Route blocked: {blocked_route}")
 
             request = self.get_prediction_request()
             if not request:
                 return
 
-            print(f"\n🔍 Finding alternatives to {blocked_route}...")
+            print(f"\nFinding alternatives to {blocked_route}...")
 
             # Get comparison excluding blocked route
             all_comparison = self.traffic_service.compare_all_routes(request)
@@ -646,20 +640,20 @@ class ConsoleUI:
             if alternatives:
                 alternatives.sort(key=lambda x: x.predicted_time_minutes)
 
-                print(f"\n🛤️ ALTERNATIVE ROUTES:")
+                print(f"\nALTERNATIVE ROUTES:")
                 print("-" * 35)
 
                 for i, alt in enumerate(alternatives):
-                    icon = "🏆" if i == 0 else "🥈" if i == 1 else "  "
-                    print(f"{icon} {alt.route_name:<20} : {alt.predicted_time_minutes} min")
+                    rank = f"#{i+1}"
+                    print(f"{rank} {alt.route_name:<25} : {alt.predicted_time_minutes} min")
 
-                print(f"\n💡 INCIDENT RECOMMENDATIONS:")
-                print(f"  • Best Alternative: {alternatives[0].route_name}")
-                print(f"  • Expected Delay: +{alternatives[0].predicted_time_minutes - 25} min (compared to normal)")
-                print(f"  • Allow extra time for increased traffic")
-                print(f"  • Check real-time updates before departing")
+                print(f"\nINCIDENT RECOMMENDATIONS:")
+                print(f"  Best Alternative: {alternatives[0].route_name}")
+                print(f"  Expected Delay: +{alternatives[0].predicted_time_minutes - 25} min (compared to normal)")
+                print(f"  Allow extra time for increased traffic")
+                print(f"  Check real-time updates before departing")
             else:
-                print("⚠️ No alternative routes available")
+                print("No alternative routes available")
 
         except Exception as e:
             self.show_error(f"Error showing incident alternatives: {e}")
@@ -667,7 +661,7 @@ class ConsoleUI:
     def show_prediction_analysis(self):
         """Show prediction analysis details"""
         try:
-            print("\n🔮 PREDICTION ANALYSIS")
+            print("\nPREDICTION ANALYSIS")
             print("=" * 50)
 
             request = self.get_prediction_request()
@@ -680,27 +674,27 @@ class ConsoleUI:
 
             request.route_name = route_name
 
-            print(f"\n🧮 Detailed prediction analysis for {route_name}...")
+            print(f"\nDetailed prediction analysis for {route_name}...")
 
             prediction = self.traffic_service.predict_travel_time(request)
 
-            print(f"\n📊 PREDICTION BREAKDOWN:")
-            print(f"  • Route: {prediction.route_name}")
-            print(f"  • Predicted Time: {prediction.predicted_time_minutes} minutes")
-            print(f"  • Confidence Level: {prediction.confidence_level:.1%}")
-            print(f"  • Generated: {prediction.timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"\nPREDICTION BREAKDOWN:")
+            print(f"  Route: {prediction.route_name}")
+            print(f"  Predicted Time: {prediction.predicted_time_minutes} minutes")
+            print(f"  Confidence Level: {prediction.confidence_level:.1%}")
+            print(f"  Generated: {prediction.timestamp.strftime('%Y-%m-%d %H:%M:%S')}")
 
-            print(f"\n🔍 ANALYSIS FACTORS:")
+            print(f"\nANALYSIS FACTORS:")
             for i, factor in enumerate(prediction.factors_considered, 1):
                 print(f"  {i}. {factor}")
 
             # Additional context
             route = self.traffic_service.db_manager.get_route(route_name)
             if route:
-                print(f"\n🛣️ ROUTE INFORMATION:")
-                print(f"  • Distance: {route.distance_km:.1f} km")
-                print(f"  • Typical Speed: {route.typical_speed_kmh} km/h")
-                print(f"  • Route Type: {route.route_type}")
+                print(f"\nROUTE INFORMATION:")
+                print(f"  Distance: {route.distance_km:.1f} km")
+                print(f"  Typical Speed: {route.typical_speed_kmh} km/h")
+                print(f"  Route Type: {route.route_type}")
 
         except Exception as e:
             self.show_error(f"Error in prediction analysis: {e}")
@@ -713,7 +707,7 @@ class ConsoleUI:
     def get_user_input(self, prompt: str) -> str:
         """Get user input with prompt"""
         try:
-            return input(f"➤ {prompt}")
+            return input(f"> {prompt}")
         except (EOFError, KeyboardInterrupt):
             print("\n")
             raise
@@ -721,27 +715,27 @@ class ConsoleUI:
     def wait_for_continue(self):
         """Wait for user to continue"""
         try:
-            input("\n🔄 Press Enter to continue...")
+            input("\nPress Enter to continue...")
         except (EOFError, KeyboardInterrupt):
             print("\n")
             self.running = False
 
     def show_info(self, message: str):
         """Show informational message"""
-        print(f"ℹ️ {message}")
+        print(f"INFO: {message}")
 
     def show_error(self, message: str):
         """Show error message"""
-        print(f"❌ Error: {message}")
+        print(f"ERROR: {message}")
 
     def show_success(self, message: str):
         """Show success message"""
-        print(f"✅ {message}")
+        print(f"SUCCESS: {message}")
 
     def exit_application(self):
         """Handle application exit"""
-        print("\n👋 Thank you for using the Traffic Analysis System!")
-        print("🚗 Drive safely and have a great journey!")
+        print("\nThank you for using the Traffic Analysis System!")
+        print("Drive safely and have a great journey!")
         print("=" * 50)
         self.running = False
 
@@ -750,4 +744,4 @@ class ConsoleUI:
         try:
             self.logger.info("Console UI shutting down")
         except:
-            pass  # Ignore cleanup errors
+            pass

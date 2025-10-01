@@ -9,7 +9,15 @@ import hashlib
 
 
 def format_time_minutes(minutes: int) -> str:
-    """Format minutes into a readable time string"""
+    """
+    Format minutes into a readable time string.
+
+    Args:
+        minutes: Number of minutes
+
+    Returns:
+        Formatted string (e.g., "25 minutes", "1 hour 30 minutes")
+    """
     if minutes < 60:
         return f"{minutes} minutes"
     else:
@@ -22,7 +30,15 @@ def format_time_minutes(minutes: int) -> str:
 
 
 def format_distance_km(distance: float) -> str:
-    """Format distance in kilometers"""
+    """
+    Format distance in kilometers.
+
+    Args:
+        distance: Distance in kilometers
+
+    Returns:
+        Formatted string (e.g., "12.5 km", "500 meters")
+    """
     if distance < 1:
         return f"{int(distance * 1000)} meters"
     else:
@@ -30,24 +46,58 @@ def format_distance_km(distance: float) -> str:
 
 
 def calculate_percentage_change(old_value: float, new_value: float) -> float:
-    """Calculate percentage change between two values"""
+    """
+    Calculate percentage change between two values.
+
+    Args:
+        old_value: Original value
+        new_value: New value
+
+    Returns:
+        Percentage change
+    """
     if old_value == 0:
         return 0.0
     return ((new_value - old_value) / old_value) * 100
 
 
 def validate_hour(hour: int) -> bool:
-    """Validate if hour is in valid range"""
+    """
+    Validate if hour is in valid range (0-23).
+
+    Args:
+        hour: Hour to validate
+
+    Returns:
+        True if valid, False otherwise
+    """
     return 0 <= hour <= 23
 
 
 def validate_coordinates(lat: float, lon: float) -> bool:
-    """Validate latitude and longitude"""
+    """
+    Validate latitude and longitude coordinates.
+
+    Args:
+        lat: Latitude
+        lon: Longitude
+
+    Returns:
+        True if valid coordinates
+    """
     return -90 <= lat <= 90 and -180 <= lon <= 180
 
 
 def parse_time_string(time_str: str) -> Optional[datetime]:
-    """Parse various time string formats"""
+    """
+    Parse various time string formats into datetime object.
+
+    Args:
+        time_str: Time string in various formats
+
+    Returns:
+        Datetime object or None if parsing fails
+    """
     formats = [
         "%Y-%m-%d %H:%M:%S",
         "%Y-%m-%d %H:%M",
@@ -66,25 +116,59 @@ def parse_time_string(time_str: str) -> Optional[datetime]:
 
 
 def calculate_travel_time_from_speed(distance_km: float, speed_kmh: float) -> int:
-    """Calculate travel time in minutes from distance and speed"""
+    """
+    Calculate travel time in minutes from distance and speed.
+
+    Args:
+        distance_km: Distance in kilometers
+        speed_kmh: Speed in km/h
+
+    Returns:
+        Travel time in minutes
+    """
     if speed_kmh <= 0:
         return 0
     return int((distance_km / speed_kmh) * 60)
 
 
 def sanitize_route_name(route_name: str) -> str:
-    """Sanitize route name for use in filenames"""
+    """
+    Sanitize route name for use in filenames.
+
+    Args:
+        route_name: Original route name
+
+    Returns:
+        Sanitized route name
+    """
     return re.sub(r'[^\w\s-]', '', route_name).strip().replace(' ', '_')
 
 
 def generate_cache_key(*args) -> str:
-    """Generate a cache key from arguments"""
+    """
+    Generate a cache key from arguments.
+
+    Args:
+        *args: Arguments to create key from
+
+    Returns:
+        MD5 hash string
+    """
     key_string = '_'.join(str(arg) for arg in args)
     return hashlib.md5(key_string.encode()).hexdigest()
 
 
 def format_timestamp(dt: datetime, format_type: str = 'full') -> str:
-    """Format datetime in various formats"""
+    """
+    Format datetime in various formats.
+
+    Args:
+        dt: Datetime object
+        format_type: Type of format ('full', 'date', 'time', 'short', 'display')
+
+    Returns:
+        Formatted datetime string
+    """
     formats = {
         'full': "%Y-%m-%d %H:%M:%S",
         'date': "%Y-%m-%d",
@@ -96,22 +180,55 @@ def format_timestamp(dt: datetime, format_type: str = 'full') -> str:
 
 
 def is_rush_hour(hour: int) -> bool:
-    """Check if given hour is rush hour"""
+    """
+    Check if given hour is rush hour.
+
+    Args:
+        hour: Hour of day (0-23)
+
+    Returns:
+        True if rush hour
+    """
     return (7 <= hour <= 9) or (17 <= hour <= 19)
 
 
 def calculate_eta(current_time: datetime, travel_minutes: int) -> datetime:
-    """Calculate estimated time of arrival"""
+    """
+    Calculate estimated time of arrival.
+
+    Args:
+        current_time: Current datetime
+        travel_minutes: Travel time in minutes
+
+    Returns:
+        ETA datetime
+    """
     return current_time + timedelta(minutes=travel_minutes)
 
 
 def get_day_type_from_datetime(dt: datetime) -> str:
-    """Get day type (Weekday/Weekend) from datetime"""
+    """
+    Get day type (Weekday/Weekend) from datetime.
+
+    Args:
+        dt: Datetime object
+
+    Returns:
+        'Weekend Day' or 'Week Day'
+    """
     return "Weekend Day" if dt.weekday() >= 5 else "Week Day"
 
 
 def convert_to_json(obj: Any) -> str:
-    """Convert object to JSON string with custom handling"""
+    """
+    Convert object to JSON string with custom handling.
+
+    Args:
+        obj: Object to convert
+
+    Returns:
+        JSON string
+    """
 
     def default_handler(o):
         if isinstance(o, datetime):
@@ -124,7 +241,16 @@ def convert_to_json(obj: Any) -> str:
 
 
 def parse_json_safe(json_str: str, default: Any = None) -> Any:
-    """Safely parse JSON string"""
+    """
+    Safely parse JSON string.
+
+    Args:
+        json_str: JSON string
+        default: Default value if parsing fails
+
+    Returns:
+        Parsed object or default
+    """
     try:
         return json.loads(json_str)
     except (json.JSONDecodeError, TypeError):
@@ -132,14 +258,30 @@ def parse_json_safe(json_str: str, default: Any = None) -> Any:
 
 
 def calculate_average(values: List[float]) -> float:
-    """Calculate average of a list of values"""
+    """
+    Calculate average of a list of values.
+
+    Args:
+        values: List of numeric values
+
+    Returns:
+        Average value
+    """
     if not values:
         return 0.0
     return sum(values) / len(values)
 
 
 def calculate_median(values: List[float]) -> float:
-    """Calculate median of a list of values"""
+    """
+    Calculate median of a list of values.
+
+    Args:
+        values: List of numeric values
+
+    Returns:
+        Median value
+    """
     if not values:
         return 0.0
     sorted_values = sorted(values)
@@ -153,14 +295,32 @@ def calculate_median(values: List[float]) -> float:
 
 
 def truncate_string(text: str, max_length: int = 50, suffix: str = "...") -> str:
-    """Truncate string to maximum length"""
+    """
+    Truncate string to maximum length.
+
+    Args:
+        text: Text to truncate
+        max_length: Maximum length
+        suffix: Suffix to add if truncated
+
+    Returns:
+        Truncated string
+    """
     if len(text) <= max_length:
         return text
     return text[:max_length - len(suffix)] + suffix
 
 
 def format_file_size(size_bytes: int) -> str:
-    """Format file size in human-readable format"""
+    """
+    Format file size in human-readable format.
+
+    Args:
+        size_bytes: Size in bytes
+
+    Returns:
+        Formatted size string
+    """
     for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
         if size_bytes < 1024.0:
             return f"{size_bytes:.2f} {unit}"
@@ -168,56 +328,101 @@ def format_file_size(size_bytes: int) -> str:
     return f"{size_bytes:.2f} PB"
 
 
-def validate_email(email: str) -> bool:
-    """Validate email address format"""
-    pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
-    return re.match(pattern, email) is not None
-
-
 def clamp(value: float, min_val: float, max_val: float) -> float:
-    """Clamp value between min and max"""
+    """
+    Clamp value between min and max.
+
+    Args:
+        value: Value to clamp
+        min_val: Minimum value
+        max_val: Maximum value
+
+    Returns:
+        Clamped value
+    """
     return max(min_val, min(value, max_val))
 
 
-def get_sri_lankan_holidays_2024() -> Dict[Tuple[int, int], str]:
-    """Get Sri Lankan public holidays for 2024"""
+def get_sri_lankan_holidays_2025() -> Dict[Tuple[int, int], str]:
+    """
+    Get Sri Lankan public holidays for 2025.
+
+    Returns:
+        Dictionary mapping (month, day) to holiday name
+    """
     return {
         (1, 1): "New Year's Day",
         (1, 14): "Thai Pongal",
         (2, 4): "Independence Day",
         (2, 23): "Maha Shivaratri",
         (3, 29): "Good Friday",
-        (4, 12): "Eid ul-Fitr (Ramadan Festival)",
+        (4, 12): "Eid ul-Fitr",
+        (4, 13): "Sinhala & Tamil New Year Eve",
+        (4, 14): "Sinhala & Tamil New Year",
         (5, 1): "May Day",
-        (5, 23): "Vesak Full Moon Poya Day",
-        (5, 24): "Day after Vesak",
-        (6, 18): "Eid ul-Adha (Hajj Festival)",
-        (8, 19): "Nikini Full Moon Poya Day",
+        (5, 12): "Vesak Full Moon Poya",
+        (5, 13): "Day after Vesak",
+        (6, 18): "Eid ul-Adha",
+        (8, 19): "Nikini Full Moon Poya",
         (10, 31): "Deepavali",
         (12, 25): "Christmas Day"
     }
 
 
 def is_sri_lankan_holiday(date: datetime) -> bool:
-    """Check if date is a Sri Lankan public holiday"""
-    holidays = get_sri_lankan_holidays_2024()
+    """
+    Check if date is a Sri Lankan public holiday.
+
+    Args:
+        date: Date to check
+
+    Returns:
+        True if holiday
+    """
+    holidays = get_sri_lankan_holidays_2025()
     return (date.month, date.day) in holidays
 
 
 def format_sri_lankan_currency(amount: float) -> str:
-    """Format amount in Sri Lankan Rupees"""
+    """
+    Format amount in Sri Lankan Rupees.
+
+    Args:
+        amount: Amount in rupees
+
+    Returns:
+        Formatted currency string
+    """
     return f"Rs. {amount:,.2f}"
 
 
 def calculate_fuel_cost(distance_km: float, fuel_efficiency_kmpl: float = 15,
                         fuel_price_per_liter: float = 350) -> float:
-    """Calculate estimated fuel cost for journey"""
+    """
+    Calculate estimated fuel cost for journey.
+
+    Args:
+        distance_km: Distance in kilometers
+        fuel_efficiency_kmpl: Fuel efficiency in km per liter
+        fuel_price_per_liter: Price per liter
+
+    Returns:
+        Estimated fuel cost
+    """
     liters_needed = distance_km / fuel_efficiency_kmpl
     return liters_needed * fuel_price_per_liter
 
 
 def get_time_of_day(hour: int) -> str:
-    """Get descriptive time of day"""
+    """
+    Get descriptive time of day.
+
+    Args:
+        hour: Hour (0-23)
+
+    Returns:
+        Time of day description
+    """
     if 5 <= hour < 12:
         return "Morning"
     elif 12 <= hour < 17:
@@ -228,15 +433,6 @@ def get_time_of_day(hour: int) -> str:
         return "Night"
 
 
-def calculate_confidence_interval(mean: float, std: float,
-                                  confidence: float = 0.95) -> Tuple[float, float]:
-    """Calculate confidence interval"""
-    import math
-    z_score = 1.96  # For 95% confidence
-    margin = z_score * std
-    return (mean - margin, mean + margin)
-
-
 # Export all utility functions
 __all__ = [
     'format_time_minutes', 'format_distance_km', 'calculate_percentage_change',
@@ -244,7 +440,7 @@ __all__ = [
     'calculate_travel_time_from_speed', 'sanitize_route_name', 'generate_cache_key',
     'format_timestamp', 'is_rush_hour', 'calculate_eta', 'get_day_type_from_datetime',
     'convert_to_json', 'parse_json_safe', 'calculate_average', 'calculate_median',
-    'truncate_string', 'format_file_size', 'validate_email', 'clamp',
-    'get_sri_lankan_holidays_2024', 'is_sri_lankan_holiday', 'format_sri_lankan_currency',
-    'calculate_fuel_cost', 'get_time_of_day', 'calculate_confidence_interval'
+    'truncate_string', 'format_file_size', 'clamp',
+    'get_sri_lankan_holidays_2025', 'is_sri_lankan_holiday', 'format_sri_lankan_currency',
+    'calculate_fuel_cost', 'get_time_of_day'
 ]
