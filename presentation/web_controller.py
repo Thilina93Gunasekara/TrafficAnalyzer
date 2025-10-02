@@ -4,7 +4,7 @@
 # presentation/web_controller.py
 # Flask web controllers for REST API endpoints
 
-from flask import Flask, request, jsonify, render_template_string
+from flask import Flask, request, jsonify, render_template_string, render_template
 from flask_cors import CORS
 from typing import Dict, Any
 from datetime import datetime
